@@ -4,8 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
+const router_1 = require("./router");
 const app = (0, express_1.default)();
-app.get('/', (request, response) => {
-    return response.json({ message: "Hello world" });
-});
-app.listen(3333);
+app.get('/', router_1.createCourse);
+app.listen(3331);
